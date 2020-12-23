@@ -1,0 +1,40 @@
+<div class="container">
+    <p-toast [style]="{marginTop: '50px'}"></p-toast>
+    <form autocomplete="false" [formGroup]="itemForm" (ngSubmit)="onSubmit(itemForm.value)">
+       <div class="ui-g">
+            <div class="ui-g-12 ui-fluid">
+                <h1>Registro de articulos</h1>
+            </div>
+       </div>
+
+       
+
+        <div class="ui-g">
+            <div class="ui-g-12 ui-lg-9 ui-md-12 ui-sm-12 ui-fluid">
+                <label>About:</label>
+                <input type="text" pInputText formControlName="_about" />
+            </div>
+        </div>
+        
+        <div class="ui-g">
+            <div class="ui-g-12 ui-lg-9 ui-md-12 ui-sm-12 ui-fluid">
+                <label>Access Url:</label>
+                <input type="text" pInputText formControlName="accessURL" />
+            </div>
+        </div>
+
+        <div class="ui-g">
+            <div class="ui-g-12 ui-lg-9 ui-md-12 ui-sm-12 ui-fluid">
+                <label>Title:</label>
+                <input type="text" pInputText formControlName="title" />
+            </div>
+        </div>
+        <div class="ui-g">
+            <div class="ui-g-12">
+                <button pButton type="submit" style="margin-right: 10px"  label="Guardar" class="ui-button-info"></button>
+                <button pButton type="button" routerLink="/itens" label="Cancelar" class="ui-button-secondary"></button>
+            </div>
+        </div>
+
+    </form>
+</div>
